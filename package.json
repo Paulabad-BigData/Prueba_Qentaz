@@ -1,0 +1,24 @@
+{
+  "name": "qentaz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.27.1",
+    "express": "4.18.0",
+    "joi": "17.6.0",
+    "lodash": "4.17.21",
+    "mongose": "0.0.2-security"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  }
+}
