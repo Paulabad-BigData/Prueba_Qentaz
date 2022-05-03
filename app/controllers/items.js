@@ -1,44 +1,24 @@
-const axios = require('axios').default // Importar los modulos
+const express = require('express')
+const app = express()
+const URL = ('https://rickandmortyapi.com/api/character/')
 const _ = require('lodash')
+const axios = require('axios').default
+const Joi = require('joi')
 const { number, string } = require('joi')
-const url = ('https://rickandmortyapi.com/api/character/?id=1')
 
 
+// GET by ID
 
-
-exports.getData = (req, res) => {
-    axios.get(url)
-    .then((result) => {
-        console.log(charecter = _.filter(result.data, 
-            {
-                id: {
-                    type: number
-                },
-                name: {
-                    type: String
-                },
-                status: {
-                    type: String
-                },
-                species: {
-                    Alive: String
-                },
-                gender: {
-                    type: String
-                },
-                origin: {
-                    name: String,
-                    url: String
-                },
-                image: {
-                    type: String
-                },
-                episodeSize: {
-                    type: number.count(_.compact)
-                }
+exports.getData = async (req, res) => {
+    try {
+        const response = await axios.get(URL, {
+            params: {
+                id
             }
-            ));
-    }).catch((err) => {
-        console.log(err);
-    });
+        })
+        res.json(response.data.results)
+    }
+    catch (err) {
+        console.log(err)
+    }
 }
