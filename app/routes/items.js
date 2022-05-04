@@ -1,10 +1,12 @@
 const express = require('express')
-const controller = require('../controllers/items')
 const router = express.Router()
+const controller = require('../controllers/items')
+
 const path = 'items'
 
+// Esta es la forma correcta de solicitar valores en ruta
 router.get(
-    `/${path}`,
+    `/${path}/:id`,
     controller.getData
 )
 

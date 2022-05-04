@@ -1,3 +1,8 @@
+/**
+ * Nunca utilizaste este codigo
+ * Mongose es un controlador de base de datos en mongo
+ * Este codigo no tiene funcion ya que no se lee ni se almacena informacion en ninguna base de datos
+ */
 const mongose = require('mongose')
 const Schema = mongose.Schema
 

@@ -1,3 +1,6 @@
+/**
+ * Nunca utilizaste este codigo
+ */
 const Joi = require('joi')
 
 const characterIdSchema = joi.string().regex(/^[0-9a-fA-F]{24}$/);
