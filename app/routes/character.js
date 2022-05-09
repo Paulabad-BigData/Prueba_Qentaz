@@ -1,6 +1,7 @@
 const express = require('express')
-const controller = require('../controllers/character')
 const router = express.Router()
+const controller = require('../controllers/character')
+
 const path = 'character'
 
 router.get(
